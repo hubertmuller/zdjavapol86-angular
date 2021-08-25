@@ -1,0 +1,21 @@
+@mixin przycisk() {
+  display: block;
+  border: 2px solid black;
+}
+
+$kolor: red;
+
+a {
+  background-color: $kolor;
+  @include przycisk
+
+}
+
+b {
+  @include przycisk
+}
+
+b {
+  color: $kolor;
+  @include przycisk
+}

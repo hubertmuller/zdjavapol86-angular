@@ -1,0 +1,18 @@
+a {
+  background-color: red;
+  display: block;
+  border: 2px solid black;
+}
+
+b {
+  display: block;
+  border: 2px solid black;
+}
+
+b {
+  color: red;
+  display: block;
+  border: 2px solid black;
+}
+
+/*# sourceMappingURL=style.css.map */
