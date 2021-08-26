@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {BmiService} from '../bmi.service';
+import {RozneService} from '../rozne.service';
 
 @Component({
   selector: 'app-stopka',
@@ -11,15 +11,17 @@ export class StopkaComponent implements OnInit {
 
   private tytul: string;
   public tytul2: string;
+  public rok: number;
 
-  constructor(private bmi: BmiService) {
+  constructor(private rozneService: RozneService) {
     this.tytul = 'czesc';
     this.tytul2 = 'czesc2';
     console.log('construktor');
+    this.rok = rozneService.rok();
   }
 
   public obliczbmi(): number {
-    return this.bmi.oblicz(100, 185);
+    return this.rozneService.oblicz(100, 185);
   }
 
   public hej(): string {
