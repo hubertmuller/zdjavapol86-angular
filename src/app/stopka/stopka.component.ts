@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
 import {RozneService} from '../rozne.service';
 
 @Component({
@@ -7,7 +7,7 @@ import {RozneService} from '../rozne.service';
   styleUrls: ['./stopka.component.scss'],
   encapsulation: ViewEncapsulation.Emulated
 })
-export class StopkaComponent implements OnInit {
+export class StopkaComponent implements OnInit, OnDestroy {
 
   private tytul: string;
   public tytul2: string;
@@ -30,6 +30,10 @@ export class StopkaComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('ngoninit');
+  }
+
+  ngOnDestroy(): void {
+    console.log('ngdestroy');
   }
 
 

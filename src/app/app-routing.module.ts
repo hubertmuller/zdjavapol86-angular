@@ -7,7 +7,7 @@ import {ListaComponent} from './lista/lista.component';
 const routes: Routes = [
   { path: 'formularz', component: FormularzComponent},
   { path: 'lista', component: ListaComponent},
-  { path: '', redirectTo: '/formularz', pathMatch: 'full'}
+  { path: '', redirectTo: '/lista', pathMatch: 'full'}
 ];
 
 @NgModule({
