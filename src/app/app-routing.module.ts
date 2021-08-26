@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormularzComponent } from './formularz/formularz.component';
 import {NaglowekComponent} from './naglowek/naglowek.component';
+import {ListaComponent} from './lista/lista.component';
 
 const routes: Routes = [
   { path: 'formularz', component: FormularzComponent},
