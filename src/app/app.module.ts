@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { StopkaComponent } from './stopka/stopka.component';
 import { NaglowekComponent } from './naglowek/naglowek.component';
 import { GlownyComponent } from './glowny/glowny.component';
+import { FormularzComponent } from './formularz/formularz.component';
+import { ListaComponent } from './lista/lista.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StopkaComponent,
     NaglowekComponent,
-    GlownyComponent
+    GlownyComponent,
+    FormularzComponent,
+    ListaComponent
   ],
   imports: [
     BrowserModule,
