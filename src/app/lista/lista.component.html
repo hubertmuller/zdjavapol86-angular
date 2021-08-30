@@ -9,17 +9,8 @@
     ładuje dane...
   </p>
 
-  <table border="1" width="100%" *ngIf="osoby">
-    <caption>Lista zapisanych na szczepienie</caption>
-    <tbody>
-    <tr>
-      <th>imie</th>
-      <th>nazwisko</th>
-    </tr>
-    <tr *ngFor="let osoba of osoby">
-      <td>{{osoba.imie}}</td>
-      <td>{{osoba.nazwisko}}</td>
-    </tr>
-    </tbody>
-  </table>
+  <app-komorka [tresc]="osoby" [tytul]="'Lista zapisanych'"></app-komorka>
+
+
+  <app-komorka [tresc]="osoby" [tytul]="'Lista rezerwowa zapisanych'"></app-komorka>
 </div>

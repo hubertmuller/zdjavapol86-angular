@@ -1,1 +1,13 @@
-<p>komorka works!</p>
+<table border="1" width="100%" *ngIf="tresc">
+  <caption>{{tytul}}</caption>
+  <tbody>
+  <tr>
+    <th>imie</th>
+    <th>nazwisko</th>
+  </tr>
+  <tr *ngFor="let osoba of tresc">
+    <td>{{osoba.imie}}</td>
+    <td>{{osoba.nazwisko}}</td>
+  </tr>
+  </tbody>
+</table>

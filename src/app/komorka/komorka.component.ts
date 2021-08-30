@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Osoba} from '../dane.service';
 
 @Component({
   selector: 'app-komorka',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./komorka.component.scss']
 })
 export class KomorkaComponent implements OnInit {
+
+  @Input()
+  public tresc: Osoba[];
+
+  @Input()
+  public tytul: string;
 
   constructor() { }
 
