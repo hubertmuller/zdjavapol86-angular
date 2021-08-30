@@ -8,11 +8,25 @@ import {DaneService} from '../dane.service';
 })
 export class ListaComponent implements OnInit {
 
+  public osoby: any;
+  public error = false;
+
   constructor(private ds: DaneService) {
-    ds.pobierzOsoby();
+    console.log('1 start konstruktora pobierz osoby');
+    ds.pobierzOsoby().subscribe(
+      (val: any) => {
+        console.log('2 przyszla odpowiedz pobierz osoby');
+        this.osoby = val;
+      },
+      (error) => {
+        this.error = true;
+      }
+    );
+    console.log('3 koniec konstruktora pobierz osoby');
   }
 
   ngOnInit(): void {
+    console.log('4 ng on init pobierz osoby');
   }
 
 }

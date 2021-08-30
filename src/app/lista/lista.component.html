@@ -1,14 +1,25 @@
 <h2> Sekcja dla zinteresowanych szczepieniami</h2>
 
+<div *ngIf="error">
+  Wystąpiły problemy z łącznością!
+</div>
 
-<table border="1" width="100%">
-  <caption>Lista zapisanych na szczepienie</caption>
-  <tbody>
-  <tr>
-    <th>imie</th><th>nazwisko</th>
-  </tr>
-  <tr>
-    <td>Jan</td><td>Kowalski</td>
-  </tr>
-  </tbody>
-</table>
+<div *ngIf="!error">
+  <p *ngIf="!osoby">
+    ładuje dane...
+  </p>
+
+  <table border="1" width="100%" *ngIf="osoby">
+    <caption>Lista zapisanych na szczepienie</caption>
+    <tbody>
+    <tr>
+      <th>imie</th>
+      <th>nazwisko</th>
+    </tr>
+    <tr *ngFor="let osoba of osoby">
+      <td>{{osoba.imie}}</td>
+      <td>{{osoba.nazwisko}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

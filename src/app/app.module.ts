@@ -8,6 +8,7 @@ import { NaglowekComponent } from './naglowek/naglowek.component';
 import { GlownyComponent } from './glowny/glowny.component';
 import { FormularzComponent } from './formularz/formularz.component';
 import { ListaComponent } from './lista/lista.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ListaComponent } from './lista/lista.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
