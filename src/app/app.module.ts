@@ -9,6 +9,7 @@ import { GlownyComponent } from './glowny/glowny.component';
 import { FormularzComponent } from './formularz/formularz.component';
 import { ListaComponent } from './lista/lista.component';
 import {HttpClientModule} from '@angular/common/http';
+import { KomorkaComponent } from './komorka/komorka.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {HttpClientModule} from '@angular/common/http';
     NaglowekComponent,
     GlownyComponent,
     FormularzComponent,
-    ListaComponent
+    ListaComponent,
+    KomorkaComponent
   ],
   imports: [
     BrowserModule,

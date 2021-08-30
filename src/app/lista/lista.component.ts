@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {DaneService} from '../dane.service';
+import {DaneService, Osoba} from '../dane.service';
 
 @Component({
   selector: 'app-lista',
@@ -8,13 +8,13 @@ import {DaneService} from '../dane.service';
 })
 export class ListaComponent implements OnInit {
 
-  public osoby: any;
+  public osoby: Osoba[];
   public error = false;
 
   constructor(private ds: DaneService) {
     console.log('1 start konstruktora pobierz osoby');
     ds.pobierzOsoby().subscribe(
-      (val: any) => {
+      (val: Osoba[]) => {
         console.log('2 przyszla odpowiedz pobierz osoby');
         this.osoby = val;
       },

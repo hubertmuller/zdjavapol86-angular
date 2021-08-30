@@ -13,9 +13,14 @@ export class DaneService {
     this.headers.append('Accept', 'application/json');
   }
 
-  pobierzOsoby(): Observable<any> {
+  pobierzOsoby(): Observable<Osoba[]> {
     console.log('poczatek pobierz osoby');
-    return this.http.get<any>('http://localhost:3200/api/lista', {headers: this.headers});
+    return this.http.get<Osoba[]>('http://localhost:3200/api/lista', {headers: this.headers});
   }
 }
 
+export interface Osoba {
+  id: number;
+  imie: string;
+  nazwisko: string;
+}
