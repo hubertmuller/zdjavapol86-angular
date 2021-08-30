@@ -5,7 +5,11 @@ import {NaglowekComponent} from './naglowek/naglowek.component';
 import {ListaComponent} from './lista/lista.component';
 
 const routes: Routes = [
-  { path: 'formularz', component: FormularzComponent},
+  { path: 'formularz', component: FormularzComponent, children: [
+      /*{
+        path: 'add', component: FormularzComponent
+      }*/
+    ]},
   { path: 'lista', component: ListaComponent},
   { path: '', redirectTo: '/lista', pathMatch: 'full'}
 ];
