@@ -19,7 +19,10 @@ const port = 3200;
 const server = http.createServer( (request, response) => {
   console.log('przyszlo zapytanie');
   if (request.method === 'OPTIONS') {
-    //response.setHeader('Access-Control-Allow-Origin', '*');
+    response.setHeader('Access-Control-Allow-Origin', '*');
+    response.setHeader('Access-Control-Allow-Headers', '*');
+    response.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    response.end();
   }
   else if (request.method === 'GET' && request.url.startsWith('/api/lista')) {
     response.setHeader('Access-Control-Allow-Origin', '*');

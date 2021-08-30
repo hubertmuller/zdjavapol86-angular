@@ -1,17 +1,21 @@
 
-<form action="index.html" method="post" name="forma">
+<form action="index.html" method="post" name="forma" [formGroup]="forma">
   <div>
     <label for="imieid">Imie</label>
-    <input type="text" size="30" value="" placeholder="np. Adam" name="imie" id="imieid" maxlength="40" accesskey="i" tabindex="1">
-    <div id="imieError" class="red noerror">
-      Musisz wpisac imie
+    <input formControlName="imie" type="text" size="30" placeholder="np. Adam" name="imie" id="imieid" maxlength="40" accesskey="i" tabindex="1">
+    <div (click)="przestaw()">[nacisnij]</div>
+
+    <!--{{forma.controls.imie.errors | json}}-->
+    <div *ngIf="forma.controls.imie.errors" id="imieError" class="red error">
+      <div *ngIf="forma.controls.imie.errors.required">Pole jest wymagane</div>
+      <div *ngIf="forma.controls.imie.errors.pattern">Takei imię nie istnieje</div>
     </div>
   </div>
   <div>
     <label for="nazwiskoid">Nazwisko</label>
-    <input type="text" size="50" value="" placeholder="np. Kowalski" name="nazwisko" id="nazwiskoid" maxlength="50" accesskey="n" tabindex="2">
-    <div id="nazwiskoError" class="red noerror">
-      Musisz wpisac nazwisko
+    <input formControlName="nazwisko" type="text" size="50" placeholder="np. Kowalski" name="nazwisko" id="nazwiskoid" maxlength="50" accesskey="n" tabindex="2">
+    <div *ngIf="forma.controls.nazwisko.errors" id="nazwiskoError" class="red error">
+      <div *ngIf="forma.controls.nazwisko.errors.pattern">Takei nazwisko nie istnieje</div>
     </div>
   </div>
   <div>
@@ -57,7 +61,7 @@
     </div>
   </div>
   <div>
-    <input type="submit" value="Zapisz">
+    <input type="submit" (click)="wyslij()" value="Zapisz">
 
   </div>
 

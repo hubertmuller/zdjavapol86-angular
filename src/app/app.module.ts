@@ -10,6 +10,7 @@ import { FormularzComponent } from './formularz/formularz.component';
 import { ListaComponent } from './lista/lista.component';
 import {HttpClientModule} from '@angular/common/http';
 import { KomorkaComponent } from './komorka/komorka.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { KomorkaComponent } from './komorka/komorka.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

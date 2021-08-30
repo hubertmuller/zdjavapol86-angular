@@ -17,10 +17,14 @@ export class DaneService {
     console.log('poczatek pobierz osoby');
     return this.http.get<Osoba[]>('http://localhost:3200/api/lista', {headers: this.headers});
   }
+
+  zapiszOsobe(osoba: Osoba): Observable<any> {
+    return this.http.post<any>('http://localhost:3200/api/osoba', {headers: this.headers});
+  }
 }
 
 export interface Osoba {
-  id: number;
+  id?: number;
   imie: string;
   nazwisko: string;
 }
